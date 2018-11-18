@@ -18,7 +18,7 @@ namespace MasterCheck2._0
         {
             InitializeComponent();
             populate();
-            txtpass.Enabled = btnLogin.Enabled =  false;
+            btncontra2.Enabled = btnlogin2.Enabled =  false;
             
         }
         BaseDeDatos db = new BaseDeDatos();
@@ -28,37 +28,7 @@ namespace MasterCheck2._0
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            try
-            {
-                MySqlConnection con = new MySqlConnection(cnn);
-            con.Open();
-         
-
-            string login = string.Format("select * from users where users = '{0}' and pass= '{1}'", cbUsuarios.Text, txtpass.Text);
-            MySqlCommand cmd = new MySqlCommand(login,con);
-            MySqlDataReader l = cmd.ExecuteReader();
-            if (l.Read())
-            {
-                this.Hide();
-                m.Show();
-
-            }
-            else
-                MessageBox.Show("No existe el usario");
-
-/*          
-                if (db.executecommand(login))
-                {
-                    this.Hide();
-                    c.Show();
-
-                }
-                */
-            }
-            catch
-            {
-                MessageBox.Show("Usario no existe");
-            }
+          
         }
         public void populate()
         {
@@ -72,7 +42,7 @@ namespace MasterCheck2._0
                     using (var reader = cmd.ExecuteReader())
                         while (reader.Read())
                         {
-                            cbUsuarios.Items.Add(reader.GetString("users"));
+                            cbusers2.Items.Add(reader.GetString("users"));
                         }
                 }
             }
@@ -80,17 +50,57 @@ namespace MasterCheck2._0
 
         private void cbUsuarios_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtpass.Enabled= true;
+            
         }
 
         private void txtpass_TextChanged(object sender, EventArgs e)
         {
-            btnLogin.Enabled = !string.IsNullOrWhiteSpace(this.txtpass.Text);
+            btnlogin2.Enabled = !string.IsNullOrWhiteSpace(this.btncontra2.Text);
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnlogin2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MySqlConnection con = new MySqlConnection(cnn);
+                con.Open();
+
+
+                string login = string.Format("select * from users where users = '{0}' and pass= '{1}'", cbusers2.Text, btncontra2.Text);
+                MySqlCommand cmd = new MySqlCommand(login, con);
+                MySqlDataReader l = cmd.ExecuteReader();
+                if (l.Read())
+                {
+                    this.Hide();
+                    m.Show();
+
+                }
+                else
+                    MessageBox.Show("No existe el usario");
+
+                /*          
+                                if (db.executecommand(login))
+                                {
+                                    this.Hide();
+                                    c.Show();
+
+                                }
+                                */
+            }
+            catch
+            {
+                MessageBox.Show("Usario no existe");
+            }
+        }
+
+        private void cbusuarios2_onItemSelected(object sender, EventArgs e)
+        {
+            btncontra2.Enabled = true;
         }
     }
 }
