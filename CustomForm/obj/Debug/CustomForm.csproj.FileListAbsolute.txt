@@ -1,0 +1,19 @@
+c:\users\sy\documents\visual studio 2013\Projects\CustomForm\CustomForm\bin\Debug\CustomForm.exe.config
+c:\users\sy\documents\visual studio 2013\Projects\CustomForm\CustomForm\bin\Debug\CustomForm.exe
+c:\users\sy\documents\visual studio 2013\Projects\CustomForm\CustomForm\bin\Debug\CustomForm.pdb
+c:\users\sy\documents\visual studio 2013\Projects\CustomForm\CustomForm\obj\Debug\CustomForm.csprojResolveAssemblyReference.cache
+c:\users\sy\documents\visual studio 2013\Projects\CustomForm\CustomForm\obj\Debug\CustomForm.MyForm.resources
+c:\users\sy\documents\visual studio 2013\Projects\CustomForm\CustomForm\obj\Debug\CustomForm.Properties.Resources.resources
+c:\users\sy\documents\visual studio 2013\Projects\CustomForm\CustomForm\obj\Debug\CustomForm.csproj.GenerateResource.Cache
+c:\users\sy\documents\visual studio 2013\Projects\CustomForm\CustomForm\obj\Debug\CustomForm.exe
+c:\users\sy\documents\visual studio 2013\Projects\CustomForm\CustomForm\obj\Debug\CustomForm.pdb
+C:\Users\Reborn 3.0\Documents\GitHub\mastercheck2.0-master\CustomForm\bin\Debug\CustomForm.exe.config
+C:\Users\Reborn 3.0\Documents\GitHub\mastercheck2.0-master\CustomForm\bin\Debug\CustomForm.exe
+C:\Users\Reborn 3.0\Documents\GitHub\mastercheck2.0-master\CustomForm\bin\Debug\CustomForm.pdb
+C:\Users\Reborn 3.0\Documents\GitHub\mastercheck2.0-master\CustomForm\obj\Debug\CustomForm.csprojAssemblyReference.cache
+C:\Users\Reborn 3.0\Documents\GitHub\mastercheck2.0-master\CustomForm\obj\Debug\CustomForm.MyForm.resources
+C:\Users\Reborn 3.0\Documents\GitHub\mastercheck2.0-master\CustomForm\obj\Debug\CustomForm.Properties.Resources.resources
+C:\Users\Reborn 3.0\Documents\GitHub\mastercheck2.0-master\CustomForm\obj\Debug\CustomForm.csproj.GenerateResource.cache
+C:\Users\Reborn 3.0\Documents\GitHub\mastercheck2.0-master\CustomForm\obj\Debug\CustomForm.csproj.CoreCompileInputs.cache
+C:\Users\Reborn 3.0\Documents\GitHub\mastercheck2.0-master\CustomForm\obj\Debug\CustomForm.exe
+C:\Users\Reborn 3.0\Documents\GitHub\mastercheck2.0-master\CustomForm\obj\Debug\CustomForm.pdb

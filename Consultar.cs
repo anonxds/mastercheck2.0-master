@@ -25,7 +25,7 @@ namespace MasterCheck2._0
                     using (var reader = cmd.ExecuteReader())
                         while (reader.Read())
                         {
-                            comboBox1.Items.Add(reader.GetString("idrfid"));
+                            cbid2.Items.Add(reader.GetString("idrfid"));
                         }
                 }
             }
@@ -41,7 +41,7 @@ namespace MasterCheck2._0
         {
             InitializeComponent();
 
-            btneliminar.Enabled = btnGuardar.Enabled = button1.Enabled = txtNombre.Enabled = txtapellido.Enabled = txtedad.Enabled = cbpuesto.Enabled = cbDepartamento.Enabled = false;
+            btnErase.Enabled = btnsave.Enabled = button1.Enabled = txtNombre2.Enabled = txtApellido2.Enabled = txtedad2.Enabled = cbpuesto2.Enabled = cbdepartamento2.Enabled = false;
 
             lbltiempo.Text = DateTime.Now.ToString("yyyy-MM-dd");
             populate();
@@ -50,11 +50,11 @@ namespace MasterCheck2._0
 
             for (int i = 0; i < dept.Length - 1; i++)
             {
-                cbDepartamento.Items.Add(dept[i]);
+                cbdepartamento2.Items.Add(dept[i]);
             }
             for (int i = 0; i < puesto.Length; i++)
             {
-                cbpuesto.Items.Add(puesto[i]);
+                cbpuesto2.Items.Add(puesto[i]);
             }
         }
         BaseDeDatos db = new BaseDeDatos();
@@ -66,7 +66,7 @@ namespace MasterCheck2._0
             cn.Open();
             MySqlCommand cmd = cn.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from registros where idrfid='" + comboBox1.SelectedItem.ToString() + "'";
+            cmd.CommandText = "select * from registros where idrfid='" + cbid2.SelectedItem.ToString() + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
           
@@ -79,15 +79,15 @@ namespace MasterCheck2._0
              
                
               //  comboBox1.Text = dr["idrfid"].ToString();
-                txtNombre.Text = dr["Nombre"].ToString();
-               txtapellido.Text = dr["Apellido"].ToString();
-               txtedad.Text = dr["Edad"].ToString();
-                cbDepartamento.Text = dr["Departamento"].ToString();
-                cbpuesto.Text = dr["puesto"].ToString();
-                string his = string.Format("select * from entrada where id='{0}'", comboBox1.Text);
-                string sal = string.Format("select sal as Salida from salida where id='{0}'", comboBox1.Text);
-                Consult.DataSource = db.SelectDataTable(his);
-                dgtSal.DataSource = db.SelectDataTable(sal);
+                txtNombre2.Text = dr["Nombre"].ToString();
+               txtApellido2.Text = dr["Apellido"].ToString();
+               txtedad2.Text = dr["Edad"].ToString();
+                cbdepartamento2.Text = dr["Departamento"].ToString();
+                cbpuesto2.Text = dr["puesto"].ToString();
+                string his = string.Format("select * from entrada where id='{0}'", cbid2.Text);
+                string sal = string.Format("select sal as Salida from salida where id='{0}'", cbid2.Text);
+                entrada.DataSource = db.SelectDataTable(his);
+                Salida.DataSource = db.SelectDataTable(sal);
 
             }
             cn.Close();
@@ -102,7 +102,7 @@ namespace MasterCheck2._0
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 //ToCsV(dataGridView1, @"c:\export.xls");
-                ToCsV(Consult, sfd.FileName); // Here dataGridview1 is your grid view name
+                ToCsV(entrada, sfd.FileName); // Here dataGridview1 is your grid view name
             }
         }
 
@@ -145,23 +145,78 @@ namespace MasterCheck2._0
 
         private void comboBox1_TextChanged(object sender, EventArgs e)
         {
-           btneliminar.Enabled= btnGuardar.Enabled= button1.Enabled= txtNombre.Enabled = txtapellido.Enabled = txtedad.Enabled = cbpuesto.Enabled = cbDepartamento.Enabled = !string.IsNullOrWhiteSpace(this.comboBox1.Text);
+           btnErase.Enabled= btnsave.Enabled= button1.Enabled= txtNombre2.Enabled = txtApellido2.Enabled = txtedad2.Enabled = cbpuesto2.Enabled = cbdepartamento2.Enabled = !string.IsNullOrWhiteSpace(this.cbid2.Text);
 
         }
 
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
+           
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+           
+
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void btnregresar_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Consultar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnreturn_Click(object sender, EventArgs e)
+        {
+            Menu f = new Menu();
+            f.Show();
+            this.Hide();
+        }
+
+        private void btnErase_Click(object sender, EventArgs e)
+        {
             try
             {
-                string alter = string.Format("UPDATE `mastercheck`.`registros` SET `Nombre` = '{0}', `Apellido` = '{1}', `Edad` = '{2}', `Departamento` = '{3}', `puesto` = '{4}' WHERE (`idrfid` = '{5}')", txtNombre.Text, txtapellido.Text, txtedad.Text, cbDepartamento.Text, cbpuesto.Text, comboBox1.Text);
+                DialogResult dialogResult = MessageBox.Show("Quiere eliminar este usuario", "Eliminar", MessageBoxButtons.YesNo);
+                string delete = string.Format("DELETE FROM `mastercheck`.`registros` WHERE(`idrfid` = '{0}')", cbid2.Text);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    if (db.executecommand(delete))
+                    {
+
+
+                        MessageBox.Show("Se Elimino");
+
+
+
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hubo un error");
+            }
+        }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string alter = string.Format("UPDATE `mastercheck`.`registros` SET `Nombre` = '{0}', `Apellido` = '{1}', `Edad` = '{2}', `Departamento` = '{3}', `puesto` = '{4}' WHERE (`idrfid` = '{5}')", txtNombre2.Text, txtApellido2.Text, txtedad2.Text, cbdepartamento2.Text, cbpuesto2.Text, cbid2.Text);
                 if (db.executecommand(alter))
                 {
                     MessageBox.Show("Se guardo los cambios");
@@ -171,54 +226,23 @@ namespace MasterCheck2._0
                     MessageBox.Show("Hubo un error");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Hubo un error2 ",ex.Message);
+                MessageBox.Show("Hubo un error2 ", ex.Message);
             }
-
         }
 
-        private void btneliminar_Click(object sender, EventArgs e)
+        private void cbid2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                DialogResult dialogResult = MessageBox.Show( "Quiere eliminar este usuario", "Eliminar", MessageBoxButtons.YesNo);
-                string delete = string.Format("DELETE FROM `mastercheck`.`registros` WHERE(`idrfid` = '{0}')", comboBox1.Text);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    if (db.executecommand(delete))
-                    {
-
-
-                        MessageBox.Show("Se Elimino");
-                    
-                 
-
-                    }
-                }
-                else if (dialogResult == DialogResult.No)
-                {
-                    
-                }
-
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Hubo un error");
-            }
-
+           
         }
 
-        private void btnregresar_Click(object sender, EventArgs e)
+        private void cbid2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Menu f = new Menu();
-            f.Show();
-            this.Hide();
-        }
-
-        private void Consultar_Load(object sender, EventArgs e)
-        {
-
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

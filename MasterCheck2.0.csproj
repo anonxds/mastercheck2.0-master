@@ -1017,5 +1017,11 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="CustomForm\CustomForm.csproj">
+      <Project>{1257b2fb-2557-4a19-9084-59f9bc217282}</Project>
+      <Name>CustomForm</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

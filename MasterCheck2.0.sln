@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterCheck2.0", "MasterCheck2.0.csproj", "{4BE4F8A3-ACC5-4FB8-AD74-A83C2D59A810}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomForm", "CustomForm\CustomForm.csproj", "{1257B2FB-2557-4A19-9084-59F9BC217282}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4BE4F8A3-ACC5-4FB8-AD74-A83C2D59A810}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BE4F8A3-ACC5-4FB8-AD74-A83C2D59A810}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BE4F8A3-ACC5-4FB8-AD74-A83C2D59A810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1257B2FB-2557-4A19-9084-59F9BC217282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1257B2FB-2557-4A19-9084-59F9BC217282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1257B2FB-2557-4A19-9084-59F9BC217282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1257B2FB-2557-4A19-9084-59F9BC217282}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -135,3 +135,7 @@ C:\Users\user\Desktop\mastercheck2.0-master-master\obj\Debug\MasterCheck2.0.cspr
 C:\Users\user\Desktop\mastercheck2.0-master-master\obj\Debug\MasterCheck2.0.exe
 C:\Users\user\Desktop\mastercheck2.0-master-master\obj\Debug\MasterCheck2.0.pdb
 C:\Users\user\Desktop\mastercheck2.0-master-master\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+C:\Users\Reborn 3.0\Documents\GitHub\mastercheck2.0-master\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+C:\Users\Reborn 3.0\Documents\GitHub\mastercheck2.0-master\bin\Debug\CustomForm.exe
+C:\Users\Reborn 3.0\Documents\GitHub\mastercheck2.0-master\bin\Debug\CustomForm.pdb
+C:\Users\Reborn 3.0\Documents\GitHub\mastercheck2.0-master\bin\Debug\CustomForm.exe.config
