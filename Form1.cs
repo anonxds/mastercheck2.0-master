@@ -19,18 +19,17 @@ namespace MasterCheck2._0
         public Form1()
         {
             InitializeComponent();
-            cbDepartamento.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbPuesto.DropDownStyle = ComboBoxStyle.DropDownList;
-          btnid.Enabled =  txtNombre.Enabled = txtEdad.Enabled = txtApellido.Enabled = cbPuesto.Enabled = cbDepartamento.Enabled = false;
-            dataGridView1.DataSource = db.SelectDataTable("select idrfid as `ID`, Nombre, Apellido, Edad, Departamento, FechaIn as `Fecha de Ingreso` from registros");
+
+          btnguardar.Enabled =  txtnombre2.Enabled = txtedad2.Enabled = txtapellido2.Enabled = cbPuesto2.Enabled = cbDepartamento2.Enabled = false;
+            bunifuCustomDataGrid1.DataSource = db.SelectDataTable("select idrfid as `ID`, Nombre, Apellido, Edad, Departamento, FechaIn as `Fecha de Ingreso` from registros");
             //  label1.Text = DateTime.Now.ToString("h:mm:ss tt");
             for (int i = 0; i < dept.Length-1; i++)
             {
-                cbDepartamento.Items.Add(dept[i]);
+                cbDepartamento2.Items.Add(dept[i]);
             }
             for (int i = 0; i < puesto.Length; i++)
             {
-                cbPuesto.Items.Add(puesto[i]);
+                cbPuesto2.Items.Add(puesto[i]);
             }
    
         }
@@ -38,31 +37,12 @@ namespace MasterCheck2._0
 
         private void btnid_Click(object sender, EventArgs e)
         {
-            try
-            {
-                MemoryStream ms = new MemoryStream();
-                pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
-                byte[] img = ms.ToArray();
-                string Agregar = string.Format("INSERT INTO `mastercheck`.`registros` (`idrfid`, `Nombre`, `Apellido`, `Edad`, `Departamento`, `FechaIn`, `puesto`, `Perfil`) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}','{7}')",
-                    txtId.Text, txtNombre.Text, txtApellido.Text, txtEdad.Text, cbDepartamento.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),cbPuesto.Text,img);
-
-                if (db.executecommand(Agregar))
-                {
-                    MessageBox.Show("Agregado al Sistema");
-                    txtApellido.Text = txtEdad.Text = txtId.Text = txtNombre.Text =  "";
-                    cbPuesto.Text = null;
-                    cbDepartamento.Text = null;
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Verifique si los Datos estan correctos "+ ex.Message);
-            }
+            
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = db.SelectDataTable("select idrfid as `ID`, Nombre, Apellido, Edad, Departamento, FechaIn as `Fecha de Ingreso` from registros");
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -89,24 +69,17 @@ namespace MasterCheck2._0
 
         private void txtId_TextChanged(object sender, EventArgs e)
         {
-         btnid.Enabled=   txtNombre.Enabled = txtEdad.Enabled = txtApellido.Enabled = cbPuesto.Enabled = cbDepartamento.Enabled = !string.IsNullOrWhiteSpace(this.txtId.Text); 
-
+        
         }
 
         private void txtId_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)&& (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
+           
         }
 
         private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
+           
         }
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
@@ -116,23 +89,18 @@ namespace MasterCheck2._0
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)) e.Handled = true;
+           
         }
       
 
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)) e.Handled = true;
+          
         }
 
         private void btnselimagen_Click(object sender, EventArgs e)
         {
-            OpenFileDialog opf = new OpenFileDialog();
-            opf.Filter = "Choose Image(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
-            if(opf.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox1.Image = Image.FromFile(opf.FileName);
-            }
+            
         }
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -149,9 +117,85 @@ namespace MasterCheck2._0
 
         private void btnrregresar_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void btnreturn_Click(object sender, EventArgs e)
+        {
             Menu f = new Menu();
             f.Show();
             this.Hide();
+        }
+
+        private void btnrefrescar_Click(object sender, EventArgs e)
+        {
+            bunifuCustomDataGrid1.DataSource = db.SelectDataTable("select idrfid as `ID`, Nombre, Apellido, Edad, Departamento, FechaIn as `Fecha de Ingreso` from registros");
+        }
+
+        private void btnguardar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                MemoryStream ms = new MemoryStream();
+                pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
+                byte[] img = ms.ToArray();
+                string Agregar = string.Format("INSERT INTO `mastercheck`.`registros` (`idrfid`, `Nombre`, `Apellido`, `Edad`, `Departamento`, `FechaIn`, `puesto`, `Perfil`) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}','{7}')",
+                    txtid2.Text, txtnombre2.Text, txtapellido2.Text, txtedad2.Text, cbDepartamento2.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), cbPuesto2.Text, img);
+
+                if (db.executecommand(Agregar))
+                {
+                    MessageBox.Show("Agregado al Sistema");
+                    txtapellido2.Text = txtedad2.Text = txtid2.Text = txtnombre2.Text = "";
+                    cbPuesto2.Text = null;
+                    cbDepartamento2.Text = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Verifique si los Datos estan correctos " + ex.Message);
+            }
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "Choose Image(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
+            if (opf.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(opf.FileName);
+            }
+        }
+
+        private void txtid2_TextChange(object sender, EventArgs e)
+        {
+            btnguardar.Enabled = txtnombre2.Enabled = txtedad2.Enabled = txtapellido2.Enabled = cbPuesto2.Enabled = cbDepartamento2.Enabled = !string.IsNullOrWhiteSpace(this.txtid2.Text);
+
+        }
+
+        private void txtid2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtnombre2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)) e.Handled = true;
+        }
+
+        private void txtapellido2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)) e.Handled = true;
+        }
+
+        private void txtedad2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -55,7 +55,7 @@ namespace MasterCheck2._0
 
         private void txtpass_TextChanged(object sender, EventArgs e)
         {
-            btnlogin2.Enabled = !string.IsNullOrWhiteSpace(this.btncontra2.Text);
+          
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -100,7 +100,17 @@ namespace MasterCheck2._0
 
         private void cbusuarios2_onItemSelected(object sender, EventArgs e)
         {
+           
+        }
+
+        private void cbusers2_SelectedIndexChanged(object sender, EventArgs e)
+        {
             btncontra2.Enabled = true;
+        }
+
+        private void btncontra2_OnValueChanged(object sender, EventArgs e)
+        {
+            btnlogin2.Enabled = !string.IsNullOrWhiteSpace(this.btncontra2.Text);
         }
     }
 }
