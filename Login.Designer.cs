@@ -49,9 +49,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MasterCheck2._0.Properties.Resources._45390856_1951129024967123_5506682406058328064_n;
-            this.pictureBox1.Location = new System.Drawing.Point(142, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(140, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(238, 209);
+            this.pictureBox1.Size = new System.Drawing.Size(232, 215);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -104,7 +104,7 @@
             this.btncontra2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btncontra2.isPassword = true;
             this.btncontra2.Location = new System.Drawing.Point(184, 310);
-            this.btncontra2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btncontra2.Margin = new System.Windows.Forms.Padding(6);
             this.btncontra2.Name = "btncontra2";
             this.btncontra2.Size = new System.Drawing.Size(135, 31);
             this.btncontra2.TabIndex = 10;
@@ -148,7 +148,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(520, 510);
+            this.ClientSize = new System.Drawing.Size(511, 506);
             this.Controls.Add(this.cbusers2);
             this.Controls.Add(this.btncontra2);
             this.Controls.Add(this.btnlogin2);

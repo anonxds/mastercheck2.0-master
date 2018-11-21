@@ -52,5 +52,10 @@ namespace MasterCheck2._0
             l.Show();
             this.Hide();
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

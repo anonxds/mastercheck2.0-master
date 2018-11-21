@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 using System.IO;
 namespace MasterCheck2._0
 {
-    public partial class Consultar : Form
+    public partial class Consultar : CustomForm.MyForm
     {
         public void populate()
         {
@@ -41,7 +41,7 @@ namespace MasterCheck2._0
         {
             InitializeComponent();
 
-            btnErase.Enabled = btnsave.Enabled = button1.Enabled = txtNombre2.Enabled = txtApellido2.Enabled = txtedad2.Enabled = cbpuesto2.Enabled = cbdepartamento2.Enabled = false;
+            btnerase3.Enabled = btnguardar3.Enabled  = txtNombre2.Enabled = txtApellido2.Enabled = txtedad2.Enabled = cbpuesto2.Enabled = cbdepartamento2.Enabled = true;
 
             lbltiempo.Text = DateTime.Now.ToString("yyyy-MM-dd");
             populate();
@@ -62,35 +62,7 @@ namespace MasterCheck2._0
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var cn = new MySqlConnection(cnn);
-            cn.Open();
-            MySqlCommand cmd = cn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from registros where idrfid='" + cbid2.SelectedItem.ToString() + "'";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-          
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-      
-            da.Fill(dt);
-
-            foreach (DataRow dr in dt.Rows)
-            {
-             
-               
-              //  comboBox1.Text = dr["idrfid"].ToString();
-                txtNombre2.Text = dr["Nombre"].ToString();
-               txtApellido2.Text = dr["Apellido"].ToString();
-               txtedad2.Text = dr["Edad"].ToString();
-                cbdepartamento2.Text = dr["Departamento"].ToString();
-                cbpuesto2.Text = dr["puesto"].ToString();
-                string his = string.Format("select * from entrada where id='{0}'", cbid2.Text);
-                string sal = string.Format("select sal as Salida from salida where id='{0}'", cbid2.Text);
-                entrada.DataSource = db.SelectDataTable(his);
-                Salida.DataSource = db.SelectDataTable(sal);
-
-            }
-            cn.Close();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -145,8 +117,7 @@ namespace MasterCheck2._0
 
         private void comboBox1_TextChanged(object sender, EventArgs e)
         {
-           btnErase.Enabled= btnsave.Enabled= button1.Enabled= txtNombre2.Enabled = txtApellido2.Enabled = txtedad2.Enabled = cbpuesto2.Enabled = cbdepartamento2.Enabled = !string.IsNullOrWhiteSpace(this.cbid2.Text);
-
+         
         }
 
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -177,24 +148,97 @@ namespace MasterCheck2._0
 
         private void btnreturn_Click(object sender, EventArgs e)
         {
-            Menu f = new Menu();
-            f.Show();
-            this.Hide();
+            
         }
 
         private void btnErase_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cbid2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var cn = new MySqlConnection(cnn);
+            cn.Open();
+            MySqlCommand cmd = cn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from registros where idrfid='" + cbid2.SelectedItem.ToString() + "'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+
+
+                //  comboBox1.Text = dr["idrfid"].ToString();
+                txtNombre2.Text = dr["Nombre"].ToString();
+                txtApellido2.Text = dr["Apellido"].ToString();
+                txtedad2.Text = dr["Edad"].ToString();
+                cbdepartamento2.Text = dr["Departamento"].ToString();
+                cbpuesto2.Text = dr["puesto"].ToString();
+                string his = string.Format("select * from entrada where id='{0}'", cbid2.Text);
+                string sal = string.Format("select sal as Salida from salida where id='{0}'", cbid2.Text);
+                entrada.DataSource = db.SelectDataTable(his);
+                Salida.DataSource = db.SelectDataTable(sal);
+
+            }
+            cn.Close();
+        }
+
+        private void cbid2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cbid2_TextChanged(object sender, EventArgs e)
+        {
+            btnerase3.Enabled = btnguardar3.Enabled  = txtNombre2.Enabled = txtApellido2.Enabled = txtedad2.Enabled = cbpuesto2.Enabled = cbdepartamento2.Enabled =!string.IsNullOrWhiteSpace(this.cbid2.Text);
+
+        }
+
+        private void btnerase3_Click(object sender, EventArgs e)
         {
             try
             {
                 DialogResult dialogResult = MessageBox.Show("Quiere eliminar este usuario", "Eliminar", MessageBoxButtons.YesNo);
                 string delete = string.Format("DELETE FROM `mastercheck`.`registros` WHERE(`idrfid` = '{0}')", cbid2.Text);
+                string deletehis = string.Format("DELETE FROM `mastercheck`.`checks` WHERE(`ID` = '{0}')", cbid2.Text);
+                string deletesal = string.Format("DELETE FROM `mastercheck`.`entrada` WHERE(`id` = '{0}')", cbid2.Text);
+                string deleteent = string.Format("DELETE FROM `mastercheck`.`salida` WHERE(`id` = '{0}')", cbid2.Text);
+
+                string deletechecks = string.Format("DELETE FROM `mastercheck`.`historial` WHERE(`id` = '{0}')", cbid2.Text);
+
+
+
+
+
                 if (dialogResult == DialogResult.Yes)
                 {
-                    if (db.executecommand(delete))
+                    if (db.executecommand(deletehis) && db.executecommand(deletesal) && db.executecommand(deleteent) && db.executecommand(deletechecks))
                     {
 
-
+                        db.executecommand(delete);
                         MessageBox.Show("Se Elimino");
+                        cbid2.Text = "";
+                        txtApellido2.Text = "";
+                        txtedad2.Text = "";
+                        txtNombre2.Text = "";
+                        cbdepartamento2.Text = "";
+                        cbpuesto2.Text = "";
+                        cbid2.Refresh();
+
 
 
 
@@ -210,9 +254,10 @@ namespace MasterCheck2._0
             {
                 MessageBox.Show("Hubo un error");
             }
+
         }
 
-        private void btnsave_Click(object sender, EventArgs e)
+        private void btnguardar3_Click(object sender, EventArgs e)
         {
             try
             {
@@ -232,17 +277,11 @@ namespace MasterCheck2._0
             }
         }
 
-        private void cbid2_SelectedIndexChanged(object sender, EventArgs e)
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-           
-        }
-
-        private void cbid2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
+            Menu f = new Menu();
+            f.Show();
+            this.Hide();
         }
     }
 }

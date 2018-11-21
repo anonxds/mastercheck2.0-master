@@ -45,7 +45,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(268, 326);
+            this.textBox1.Location = new System.Drawing.Point(249, 326);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(127, 26);
             this.textBox1.TabIndex = 15;
@@ -55,7 +55,7 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Enabled = false;
-            this.lblID.Location = new System.Drawing.Point(653, 171);
+            this.lblID.Location = new System.Drawing.Point(643, 194);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(65, 20);
             this.lblID.TabIndex = 2;
@@ -64,7 +64,7 @@
             // lblNom
             // 
             this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(771, 171);
+            this.lblNom.Location = new System.Drawing.Point(761, 194);
             this.lblNom.Name = "lblNom";
             this.lblNom.Size = new System.Drawing.Size(13, 20);
             this.lblNom.TabIndex = 5;
@@ -78,7 +78,7 @@
             // lbldept
             // 
             this.lbldept.AutoSize = true;
-            this.lbldept.Location = new System.Drawing.Point(653, 201);
+            this.lbldept.Location = new System.Drawing.Point(643, 224);
             this.lbldept.Name = "lbldept";
             this.lbldept.Size = new System.Drawing.Size(112, 20);
             this.lbldept.TabIndex = 8;
@@ -97,7 +97,7 @@
             // lbldepartamento
             // 
             this.lbldepartamento.AutoSize = true;
-            this.lbldepartamento.Location = new System.Drawing.Point(771, 201);
+            this.lbldepartamento.Location = new System.Drawing.Point(761, 224);
             this.lbldepartamento.Name = "lbldepartamento";
             this.lbldepartamento.Size = new System.Drawing.Size(13, 20);
             this.lbldepartamento.TabIndex = 10;
@@ -117,7 +117,7 @@
             // 
             this.lblChek.AutoSize = true;
             this.lblChek.Image = global::MasterCheck2._0.Properties.Resources.appbar_check;
-            this.lblChek.Location = new System.Drawing.Point(866, 171);
+            this.lblChek.Location = new System.Drawing.Point(856, 194);
             this.lblChek.Name = "lblChek";
             this.lblChek.Size = new System.Drawing.Size(141, 60);
             this.lblChek.TabIndex = 12;
@@ -166,13 +166,14 @@
             this.circularProgressBar1.TabIndex = 14;
             this.circularProgressBar1.Text = "00:00:00";
             this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.circularProgressBar1.Value = 68;
             this.circularProgressBar1.Click += new System.EventHandler(this.circularProgressBar1_Click);
             // 
             // Check
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Navy;
+            this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(1028, 509);
             this.ControlBox = false;
             this.Controls.Add(this.lbltimer);
@@ -184,6 +185,7 @@
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.circularProgressBar1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Check";

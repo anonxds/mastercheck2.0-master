@@ -21,7 +21,7 @@ namespace CustomForm
         private void MyForm_Load(object sender, EventArgs e)
         {
             // bạn có thể thay đổi dòng này để có các hiệu ứng màu sắc khác nhau.
-            border = new Border(this, Color.FromArgb(64, 241, 64), Color.White, true, true);   
+            border = new Border(this, Color.FromArgb(16, 22, 14), Color.White, true, true);   
         }
     }
 }

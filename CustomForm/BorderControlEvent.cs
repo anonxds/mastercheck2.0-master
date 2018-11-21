@@ -35,7 +35,7 @@ namespace CustomForm
 
         void MiniBox_MouseClick(object sender, MouseEventArgs e)
         {
-        //    _frm.WindowState = FormWindowState.Minimized;
+           _frm.WindowState = FormWindowState.Minimized;
         }
 
         //NormnalBox

@@ -20,7 +20,7 @@ namespace MasterCheck2._0
         {
             InitializeComponent();
 
-          btnguardar.Enabled =  txtnombre2.Enabled = txtedad2.Enabled = txtapellido2.Enabled = cbPuesto2.Enabled = cbDepartamento2.Enabled = false;
+          btnguardar2.Enabled =  txtnombre2.Enabled = txtedad2.Enabled = txtapellido2.Enabled = cbPuesto2.Enabled = cbDepartamento2.Enabled = false;
             bunifuCustomDataGrid1.DataSource = db.SelectDataTable("select idrfid as `ID`, Nombre, Apellido, Edad, Departamento, FechaIn as `Fecha de Ingreso` from registros");
             //  label1.Text = DateTime.Now.ToString("h:mm:ss tt");
             for (int i = 0; i < dept.Length-1; i++)
@@ -122,38 +122,17 @@ namespace MasterCheck2._0
 
         private void btnreturn_Click(object sender, EventArgs e)
         {
-            Menu f = new Menu();
-            f.Show();
-            this.Hide();
+          
         }
 
         private void btnrefrescar_Click(object sender, EventArgs e)
         {
-            bunifuCustomDataGrid1.DataSource = db.SelectDataTable("select idrfid as `ID`, Nombre, Apellido, Edad, Departamento, FechaIn as `Fecha de Ingreso` from registros");
+
         }
 
         private void btnguardar_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                MemoryStream ms = new MemoryStream();
-                pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
-                byte[] img = ms.ToArray();
-                string Agregar = string.Format("INSERT INTO `mastercheck`.`registros` (`idrfid`, `Nombre`, `Apellido`, `Edad`, `Departamento`, `FechaIn`, `puesto`, `Perfil`) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}','{7}')",
-                    txtid2.Text, txtnombre2.Text, txtapellido2.Text, txtedad2.Text, cbDepartamento2.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), cbPuesto2.Text, img);
-
-                if (db.executecommand(Agregar))
-                {
-                    MessageBox.Show("Agregado al Sistema");
-                    txtapellido2.Text = txtedad2.Text = txtid2.Text = txtnombre2.Text = "";
-                    cbPuesto2.Text = null;
-                    cbDepartamento2.Text = null;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Verifique si los Datos estan correctos " + ex.Message);
-            }
+         
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -168,7 +147,7 @@ namespace MasterCheck2._0
 
         private void txtid2_TextChange(object sender, EventArgs e)
         {
-            btnguardar.Enabled = txtnombre2.Enabled = txtedad2.Enabled = txtapellido2.Enabled = cbPuesto2.Enabled = cbDepartamento2.Enabled = !string.IsNullOrWhiteSpace(this.txtid2.Text);
+            btnguardar2.Enabled = txtnombre2.Enabled = txtedad2.Enabled = txtapellido2.Enabled = cbPuesto2.Enabled = cbDepartamento2.Enabled = !string.IsNullOrWhiteSpace(this.txtid2.Text);
 
         }
 
@@ -195,6 +174,47 @@ namespace MasterCheck2._0
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnregresar3_Click(object sender, EventArgs e)
+        {
+            Menu f = new Menu();
+            f.Show();
+            this.Hide();
+        }
+
+        private void btnrefresh_Click_1(object sender, EventArgs e)
+        {
+            bunifuCustomDataGrid1.DataSource = db.SelectDataTable("select idrfid as `ID`, Nombre, Apellido, Edad, Departamento, FechaIn as `Fecha de Ingreso` from registros");
+        }
+
+        private void btnguardar2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MemoryStream ms = new MemoryStream();
+                pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
+                byte[] img = ms.ToArray();
+                string Agregar = string.Format("INSERT INTO `mastercheck`.`registros` (`idrfid`, `Nombre`, `Apellido`, `Edad`, `Departamento`, `FechaIn`, `puesto`, `Perfil`) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}','{7}')",
+                    txtid2.Text, txtnombre2.Text, txtapellido2.Text, txtedad2.Text, cbDepartamento2.Text, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), cbPuesto2.Text, img);
+
+                if (db.executecommand(Agregar))
+                {
+                    MessageBox.Show("Agregado al Sistema");
+                    txtapellido2.Text = txtedad2.Text = txtid2.Text = txtnombre2.Text = "";
+                    cbPuesto2.Text = null;
+                    cbDepartamento2.Text = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Verifique si los Datos estan correctos " + ex.Message);
             }
         }
     }
