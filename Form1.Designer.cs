@@ -47,89 +47,89 @@
             this.cbPuesto2 = new Bunifu.UI.WinForms.BunifuDropdown();
             this.cbDepartamento2 = new Bunifu.UI.WinForms.BunifuDropdown();
             this.btnregresar3 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnrefresh = new Bunifu.Framework.UI.BunifuImageButton();
             this.label1 = new System.Windows.Forms.Label();
             this.btnguardar2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnpicture = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnregresar3)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnrefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnguardar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnpicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblid
             // 
             this.lblid.AutoSize = true;
-            this.lblid.Location = new System.Drawing.Point(174, 64);
-            this.lblid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblid.Font = new System.Drawing.Font("Ace Sans Demo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblid.Location = new System.Drawing.Point(261, 98);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(18, 13);
+            this.lblid.Size = new System.Drawing.Size(19, 16);
             this.lblid.TabIndex = 8;
             this.lblid.Text = "ID";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(174, 90);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Font = new System.Drawing.Font("Ace Sans Demo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(261, 138);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.Size = new System.Drawing.Size(66, 16);
             this.lblNombre.TabIndex = 9;
             this.lblNombre.Text = "Nombre";
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(174, 123);
-            this.lblApellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApellido.Font = new System.Drawing.Font("Ace Sans Demo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido.Location = new System.Drawing.Point(261, 189);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(44, 13);
+            this.lblApellido.Size = new System.Drawing.Size(72, 16);
             this.lblApellido.TabIndex = 10;
             this.lblApellido.Text = "Apellido";
             // 
             // lbl
             // 
             this.lbl.AutoSize = true;
-            this.lbl.Location = new System.Drawing.Point(174, 192);
-            this.lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl.Font = new System.Drawing.Font("Ace Sans Demo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.Location = new System.Drawing.Point(261, 295);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(32, 13);
+            this.lbl.Size = new System.Drawing.Size(42, 16);
             this.lbl.TabIndex = 12;
             this.lbl.Text = "Edad";
             // 
             // lblDepartamento
             // 
             this.lblDepartamento.AutoSize = true;
-            this.lblDepartamento.Location = new System.Drawing.Point(174, 233);
-            this.lblDepartamento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDepartamento.Font = new System.Drawing.Font("Ace Sans Demo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartamento.Location = new System.Drawing.Point(261, 358);
             this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(74, 13);
+            this.lblDepartamento.Size = new System.Drawing.Size(113, 16);
             this.lblDepartamento.TabIndex = 14;
             this.lblDepartamento.Text = "Departamento";
             // 
             // lblpuesto
             // 
             this.lblpuesto.AutoSize = true;
-            this.lblpuesto.Location = new System.Drawing.Point(174, 155);
-            this.lblpuesto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblpuesto.Font = new System.Drawing.Font("Ace Sans Demo", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpuesto.Location = new System.Drawing.Point(261, 238);
             this.lblpuesto.Name = "lblpuesto";
-            this.lblpuesto.Size = new System.Drawing.Size(40, 13);
+            this.lblpuesto.Size = new System.Drawing.Size(59, 16);
             this.lblpuesto.TabIndex = 19;
             this.lblpuesto.Text = "Puesto";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(231, 19);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(364, 28);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 131);
+            this.pictureBox1.Size = new System.Drawing.Size(176, 202);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
@@ -137,10 +137,10 @@
             // Regresar
             // 
             this.Regresar.AutoSize = true;
-            this.Regresar.Location = new System.Drawing.Point(5, 344);
-            this.Regresar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Regresar.Font = new System.Drawing.Font("Ace Sans Demo", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Regresar.Location = new System.Drawing.Point(21, 502);
             this.Regresar.Name = "Regresar";
-            this.Regresar.Size = new System.Drawing.Size(50, 13);
+            this.Regresar.Size = new System.Drawing.Size(85, 16);
             this.Regresar.TabIndex = 26;
             this.Regresar.Text = "Regresar";
             // 
@@ -164,12 +164,11 @@
             this.bunifuCustomDataGrid1.EnableHeadersVisualStyles = false;
             this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(364, 54);
-            this.bunifuCustomDataGrid1.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(546, 83);
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.bunifuCustomDataGrid1.RowTemplate.Height = 28;
-            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(407, 283);
+            this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(610, 435);
             this.bunifuCustomDataGrid1.TabIndex = 30;
             this.bunifuCustomDataGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuCustomDataGrid1_CellContentClick);
             // 
@@ -191,17 +190,16 @@
             this.txtedad2.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtedad2.DefaultText = "";
             this.txtedad2.Enabled = false;
-            this.txtedad2.FillColor = System.Drawing.Color.White;
+            this.txtedad2.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.txtedad2.HideSelection = true;
             this.txtedad2.IconLeft = null;
             this.txtedad2.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.txtedad2.IconPadding = 10;
             this.txtedad2.IconRight = null;
             this.txtedad2.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txtedad2.Location = new System.Drawing.Point(17, 183);
-            this.txtedad2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtedad2.Location = new System.Drawing.Point(13, 293);
             this.txtedad2.MaxLength = 32767;
-            this.txtedad2.MinimumSize = new System.Drawing.Size(67, 23);
+            this.txtedad2.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtedad2.Modified = false;
             this.txtedad2.Name = "txtedad2";
             this.txtedad2.PasswordChar = '\0';
@@ -210,7 +208,7 @@
             this.txtedad2.SelectionLength = 0;
             this.txtedad2.SelectionStart = 0;
             this.txtedad2.ShortcutsEnabled = true;
-            this.txtedad2.Size = new System.Drawing.Size(67, 23);
+            this.txtedad2.Size = new System.Drawing.Size(100, 35);
             this.txtedad2.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtedad2.TabIndex = 32;
             this.txtedad2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -237,17 +235,16 @@
             this.txtapellido2.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtapellido2.DefaultText = "";
             this.txtapellido2.Enabled = false;
-            this.txtapellido2.FillColor = System.Drawing.Color.White;
+            this.txtapellido2.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.txtapellido2.HideSelection = true;
             this.txtapellido2.IconLeft = null;
             this.txtapellido2.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.txtapellido2.IconPadding = 10;
             this.txtapellido2.IconRight = null;
             this.txtapellido2.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txtapellido2.Location = new System.Drawing.Point(16, 114);
-            this.txtapellido2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtapellido2.Location = new System.Drawing.Point(11, 173);
             this.txtapellido2.MaxLength = 32767;
-            this.txtapellido2.MinimumSize = new System.Drawing.Size(67, 23);
+            this.txtapellido2.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtapellido2.Modified = false;
             this.txtapellido2.Name = "txtapellido2";
             this.txtapellido2.PasswordChar = '\0';
@@ -256,7 +253,7 @@
             this.txtapellido2.SelectionLength = 0;
             this.txtapellido2.SelectionStart = 0;
             this.txtapellido2.ShortcutsEnabled = true;
-            this.txtapellido2.Size = new System.Drawing.Size(68, 23);
+            this.txtapellido2.Size = new System.Drawing.Size(102, 35);
             this.txtapellido2.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtapellido2.TabIndex = 33;
             this.txtapellido2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -283,17 +280,16 @@
             this.txtnombre2.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnombre2.DefaultText = "";
             this.txtnombre2.Enabled = false;
-            this.txtnombre2.FillColor = System.Drawing.Color.White;
+            this.txtnombre2.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.txtnombre2.HideSelection = true;
             this.txtnombre2.IconLeft = null;
             this.txtnombre2.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.txtnombre2.IconPadding = 10;
             this.txtnombre2.IconRight = null;
             this.txtnombre2.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txtnombre2.Location = new System.Drawing.Point(16, 81);
-            this.txtnombre2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtnombre2.Location = new System.Drawing.Point(11, 123);
             this.txtnombre2.MaxLength = 32767;
-            this.txtnombre2.MinimumSize = new System.Drawing.Size(67, 23);
+            this.txtnombre2.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtnombre2.Modified = false;
             this.txtnombre2.Name = "txtnombre2";
             this.txtnombre2.PasswordChar = '\0';
@@ -302,7 +298,7 @@
             this.txtnombre2.SelectionLength = 0;
             this.txtnombre2.SelectionStart = 0;
             this.txtnombre2.ShortcutsEnabled = true;
-            this.txtnombre2.Size = new System.Drawing.Size(67, 23);
+            this.txtnombre2.Size = new System.Drawing.Size(100, 35);
             this.txtnombre2.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtnombre2.TabIndex = 34;
             this.txtnombre2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -328,17 +324,16 @@
             this.txtid2.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtid2.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtid2.DefaultText = "";
-            this.txtid2.FillColor = System.Drawing.Color.White;
+            this.txtid2.FillColor = System.Drawing.Color.DeepSkyBlue;
             this.txtid2.HideSelection = true;
             this.txtid2.IconLeft = null;
             this.txtid2.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.txtid2.IconPadding = 10;
             this.txtid2.IconRight = null;
             this.txtid2.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txtid2.Location = new System.Drawing.Point(16, 54);
-            this.txtid2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtid2.Location = new System.Drawing.Point(11, 81);
             this.txtid2.MaxLength = 32767;
-            this.txtid2.MinimumSize = new System.Drawing.Size(67, 23);
+            this.txtid2.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtid2.Modified = false;
             this.txtid2.Name = "txtid2";
             this.txtid2.PasswordChar = '\0';
@@ -347,7 +342,7 @@
             this.txtid2.SelectionLength = 0;
             this.txtid2.SelectionStart = 0;
             this.txtid2.ShortcutsEnabled = true;
-            this.txtid2.Size = new System.Drawing.Size(133, 23);
+            this.txtid2.Size = new System.Drawing.Size(200, 35);
             this.txtid2.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtid2.TabIndex = 35;
             this.txtid2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -359,7 +354,7 @@
             // 
             // cbPuesto2
             // 
-            this.cbPuesto2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.cbPuesto2.BackColor = System.Drawing.Color.Ivory;
             this.cbPuesto2.BorderRadius = 1;
             this.cbPuesto2.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cbPuesto2.DisabledColor = System.Drawing.Color.Gray;
@@ -380,16 +375,15 @@
             this.cbPuesto2.ItemForeColor = System.Drawing.Color.Purple;
             this.cbPuesto2.ItemHeight = 26;
             this.cbPuesto2.ItemHighLightColor = System.Drawing.Color.Thistle;
-            this.cbPuesto2.Location = new System.Drawing.Point(16, 147);
-            this.cbPuesto2.Margin = new System.Windows.Forms.Padding(2);
+            this.cbPuesto2.Location = new System.Drawing.Point(13, 233);
             this.cbPuesto2.Name = "cbPuesto2";
-            this.cbPuesto2.Size = new System.Drawing.Size(114, 32);
+            this.cbPuesto2.Size = new System.Drawing.Size(169, 32);
             this.cbPuesto2.TabIndex = 36;
             this.cbPuesto2.Text = null;
             // 
             // cbDepartamento2
             // 
-            this.cbDepartamento2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.cbDepartamento2.BackColor = System.Drawing.Color.Ivory;
             this.cbDepartamento2.BorderRadius = 1;
             this.cbDepartamento2.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cbDepartamento2.DisabledColor = System.Drawing.Color.Gray;
@@ -410,10 +404,9 @@
             this.cbDepartamento2.ItemForeColor = System.Drawing.Color.Purple;
             this.cbDepartamento2.ItemHeight = 26;
             this.cbDepartamento2.ItemHighLightColor = System.Drawing.Color.Thistle;
-            this.cbDepartamento2.Location = new System.Drawing.Point(16, 225);
-            this.cbDepartamento2.Margin = new System.Windows.Forms.Padding(2);
+            this.cbDepartamento2.Location = new System.Drawing.Point(11, 344);
             this.cbDepartamento2.Name = "cbDepartamento2";
-            this.cbDepartamento2.Size = new System.Drawing.Size(146, 32);
+            this.cbDepartamento2.Size = new System.Drawing.Size(217, 32);
             this.cbDepartamento2.TabIndex = 37;
             this.cbDepartamento2.Text = null;
             // 
@@ -422,38 +415,22 @@
             this.btnregresar3.BackColor = System.Drawing.Color.Transparent;
             this.btnregresar3.Image = ((System.Drawing.Image)(resources.GetObject("btnregresar3.Image")));
             this.btnregresar3.ImageActive = null;
-            this.btnregresar3.Location = new System.Drawing.Point(8, 359);
-            this.btnregresar3.Margin = new System.Windows.Forms.Padding(2);
+            this.btnregresar3.Location = new System.Drawing.Point(24, 552);
             this.btnregresar3.Name = "btnregresar3";
-            this.btnregresar3.Size = new System.Drawing.Size(47, 46);
+            this.btnregresar3.Size = new System.Drawing.Size(70, 71);
             this.btnregresar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnregresar3.TabIndex = 30;
             this.btnregresar3.TabStop = false;
             this.btnregresar3.Zoom = 10;
             this.btnregresar3.Click += new System.EventHandler(this.btnregresar3_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel2.Controls.Add(this.txtid2);
-            this.panel2.Controls.Add(this.cbDepartamento2);
-            this.panel2.Controls.Add(this.txtnombre2);
-            this.panel2.Controls.Add(this.txtedad2);
-            this.panel2.Controls.Add(this.cbPuesto2);
-            this.panel2.Controls.Add(this.txtapellido2);
-            this.panel2.Location = new System.Drawing.Point(-1, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(171, 320);
-            this.panel2.TabIndex = 39;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(454, 392);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Font = new System.Drawing.Font("Ace Sans Demo", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(664, 598);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(95, 16);
             this.label2.TabIndex = 24;
             this.label2.Text = "Refrescar";
             // 
@@ -462,10 +439,9 @@
             this.btnrefresh.BackColor = System.Drawing.Color.Transparent;
             this.btnrefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnrefresh.Image")));
             this.btnrefresh.ImageActive = ((System.Drawing.Image)(resources.GetObject("btnrefresh.ImageActive")));
-            this.btnrefresh.Location = new System.Drawing.Point(457, 344);
-            this.btnrefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnrefresh.Location = new System.Drawing.Point(677, 524);
             this.btnrefresh.Name = "btnrefresh";
-            this.btnrefresh.Size = new System.Drawing.Size(47, 46);
+            this.btnrefresh.Size = new System.Drawing.Size(70, 71);
             this.btnrefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnrefresh.TabIndex = 31;
             this.btnrefresh.TabStop = false;
@@ -475,10 +451,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(367, 392);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Font = new System.Drawing.Font("Ace Sans Demo", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(545, 598);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.Size = new System.Drawing.Size(77, 16);
             this.label1.TabIndex = 23;
             this.label1.Text = "Guardar";
             // 
@@ -487,10 +463,9 @@
             this.btnguardar2.BackColor = System.Drawing.Color.Transparent;
             this.btnguardar2.Image = ((System.Drawing.Image)(resources.GetObject("btnguardar2.Image")));
             this.btnguardar2.ImageActive = ((System.Drawing.Image)(resources.GetObject("btnguardar2.ImageActive")));
-            this.btnguardar2.Location = new System.Drawing.Point(365, 344);
-            this.btnguardar2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnguardar2.Location = new System.Drawing.Point(548, 524);
             this.btnguardar2.Name = "btnguardar2";
-            this.btnguardar2.Size = new System.Drawing.Size(47, 46);
+            this.btnguardar2.Size = new System.Drawing.Size(70, 71);
             this.btnguardar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnguardar2.TabIndex = 40;
             this.btnguardar2.TabStop = false;
@@ -502,9 +477,10 @@
             this.btnpicture.BackColor = System.Drawing.Color.Transparent;
             this.btnpicture.Image = ((System.Drawing.Image)(resources.GetObject("btnpicture.Image")));
             this.btnpicture.ImageActive = null;
-            this.btnpicture.Location = new System.Drawing.Point(252, 155);
+            this.btnpicture.Location = new System.Drawing.Point(400, 238);
+            this.btnpicture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnpicture.Name = "btnpicture";
-            this.btnpicture.Size = new System.Drawing.Size(71, 71);
+            this.btnpicture.Size = new System.Drawing.Size(106, 109);
             this.btnpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnpicture.TabIndex = 41;
             this.btnpicture.TabStop = false;
@@ -516,27 +492,57 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = global::MasterCheck2._0.Properties.Resources._45390856_1951129024967123_5506682406058328064_n;
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(728, 7);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(1092, 11);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(43, 42);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(64, 65);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 42;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
             // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.cbDepartamento2);
+            this.bunifuGradientPanel1.Controls.Add(this.txtid2);
+            this.bunifuGradientPanel1.Controls.Add(this.txtapellido2);
+            this.bunifuGradientPanel1.Controls.Add(this.cbPuesto2);
+            this.bunifuGradientPanel1.Controls.Add(this.txtnombre2);
+            this.bunifuGradientPanel1.Controls.Add(this.txtedad2);
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Cyan;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.DeepSkyBlue;
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.GhostWhite;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.MediumBlue;
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(1, 2);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(242, 465);
+            this.bunifuGradientPanel1.TabIndex = 43;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(427, 371);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 20);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "Foto";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Ivory;
-            this.ClientSize = new System.Drawing.Size(780, 413);
+            this.ClientSize = new System.Drawing.Size(1170, 635);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.btnpicture);
             this.Controls.Add(this.btnguardar2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnrefresh);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnregresar3);
             this.Controls.Add(this.Regresar);
             this.Controls.Add(this.bunifuCustomDataGrid1);
@@ -547,8 +553,10 @@
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblid);
+            this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Opacity = 0.9D;
@@ -558,11 +566,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnregresar3)).EndInit();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnrefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnguardar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnpicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.bunifuGradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -584,7 +592,6 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtid2;
         private Bunifu.UI.WinForms.BunifuDropdown cbPuesto2;
         private Bunifu.UI.WinForms.BunifuDropdown cbDepartamento2;
-        private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuImageButton btnregresar3;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuImageButton btnrefresh;
@@ -592,6 +599,8 @@
         private Bunifu.Framework.UI.BunifuImageButton btnguardar2;
         private Bunifu.Framework.UI.BunifuImageButton btnpicture;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
+        private System.Windows.Forms.Label label3;
     }
 }
 

@@ -35,30 +35,8 @@ namespace MasterCheck2._0
         }
         BaseDeDatos db = new BaseDeDatos();
 
-        private void btnid_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void cbID_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
+       
+       
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -67,41 +45,7 @@ namespace MasterCheck2._0
             this.Hide();
         }
 
-        private void txtId_TextChanged(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void txtId_KeyPress(object sender, KeyPressEventArgs e)
-        {
-           
-        }
-
-        private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
-        {
-           
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-           
-        }
       
-
-        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
-        {
-          
-        }
-
-        private void btnselimagen_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -112,33 +56,22 @@ namespace MasterCheck2._0
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+            label1.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            lblApellido.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            lblid.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            lblNombre.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            lblDepartamento.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            lblpuesto.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            label2.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            lbl.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            Regresar.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            label3.Font = new Font("Paloseco", 10, FontStyle.Regular);
 
         }
 
-        private void btnrregresar_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnreturn_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void btnrefrescar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnguardar_Click_1(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-         
-        }
+     
+        
 
         private void txtid2_TextChange(object sender, EventArgs e)
         {

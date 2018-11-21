@@ -43,30 +43,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(83, 115);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Font = new System.Drawing.Font("Ace Sans Demo", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(124, 177);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 26);
+            this.label1.Size = new System.Drawing.Size(89, 32);
             this.label1.TabIndex = 3;
             this.label1.Text = "Agregar\r\nEmpleado";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(187, 115);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Font = new System.Drawing.Font("Ace Sans Demo", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(270, 177);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 26);
+            this.label2.Size = new System.Drawing.Size(89, 32);
             this.label2.TabIndex = 4;
             this.label2.Text = "  Editar\r\nEmpleado";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(285, 115);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Font = new System.Drawing.Font("Ace Sans Demo", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(426, 177);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 26);
+            this.label3.Size = new System.Drawing.Size(92, 32);
             this.label3.TabIndex = 5;
             this.label3.Text = "Consultar\r\n   Listas";
             // 
@@ -75,9 +75,10 @@
             this.btnagregar3.BackColor = System.Drawing.Color.Transparent;
             this.btnagregar3.Image = ((System.Drawing.Image)(resources.GetObject("btnagregar3.Image")));
             this.btnagregar3.ImageActive = ((System.Drawing.Image)(resources.GetObject("btnagregar3.ImageActive")));
-            this.btnagregar3.Location = new System.Drawing.Point(76, 41);
+            this.btnagregar3.Location = new System.Drawing.Point(114, 63);
+            this.btnagregar3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnagregar3.Name = "btnagregar3";
-            this.btnagregar3.Size = new System.Drawing.Size(71, 71);
+            this.btnagregar3.Size = new System.Drawing.Size(106, 109);
             this.btnagregar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnagregar3.TabIndex = 10;
             this.btnagregar3.TabStop = false;
@@ -89,9 +90,10 @@
             this.btneditar3.BackColor = System.Drawing.Color.Transparent;
             this.btneditar3.Image = ((System.Drawing.Image)(resources.GetObject("btneditar3.Image")));
             this.btneditar3.ImageActive = ((System.Drawing.Image)(resources.GetObject("btneditar3.ImageActive")));
-            this.btneditar3.Location = new System.Drawing.Point(175, 41);
+            this.btneditar3.Location = new System.Drawing.Point(262, 63);
+            this.btneditar3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btneditar3.Name = "btneditar3";
-            this.btneditar3.Size = new System.Drawing.Size(71, 71);
+            this.btneditar3.Size = new System.Drawing.Size(106, 109);
             this.btneditar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btneditar3.TabIndex = 11;
             this.btneditar3.TabStop = false;
@@ -103,9 +105,10 @@
             this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
             this.bunifuImageButton3.ImageActive = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.ImageActive")));
-            this.bunifuImageButton3.Location = new System.Drawing.Point(275, 41);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(412, 63);
+            this.bunifuImageButton3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(71, 71);
+            this.bunifuImageButton3.Size = new System.Drawing.Size(106, 109);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton3.TabIndex = 12;
             this.bunifuImageButton3.TabStop = false;
@@ -114,10 +117,10 @@
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(412, 173);
+            this.ClientSize = new System.Drawing.Size(618, 266);
             this.Controls.Add(this.bunifuImageButton3);
             this.Controls.Add(this.btneditar3);
             this.Controls.Add(this.btnagregar3);
@@ -126,7 +129,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.MinimizeBox = false;
             this.Name = "Menu";
             this.Opacity = 0.9D;

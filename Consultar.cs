@@ -143,7 +143,16 @@ namespace MasterCheck2._0
 
         private void Consultar_Load(object sender, EventArgs e)
         {
-
+            lblApellido.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            lbledad.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            lblpuesto.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            label1.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            label2.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            label3.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            label4.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            label5.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            label6.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            label7.Font = new Font("Paloseco", 10, FontStyle.Regular);
         }
 
         private void btnreturn_Click(object sender, EventArgs e)

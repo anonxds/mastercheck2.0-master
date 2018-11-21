@@ -124,21 +124,7 @@ namespace MasterCheck2._0
 
         private void cbcmd_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cdlistas.Text == "Empleados")
-            {
-                bunifuCustomDataGrid1.DataSource = db.SelectDataTable(c);
-                btnexport.Enabled = true;
-            }
-            else if(cdlistas.Text == "Salida")
-            {
-                bunifuCustomDataGrid1.DataSource = db.SelectDataTable(s);
-                btnexport.Enabled = true;
-            }
-            else if(cdlistas.Text == "Entrada")
-            {
-                bunifuCustomDataGrid1.DataSource = db.SelectDataTable(es);
-                btnexport.Enabled = true;
-            }
+           
         }
         private void OnDiagnosticMessage(string Args)
         {
@@ -157,6 +143,11 @@ namespace MasterCheck2._0
             Thread ListThread = new Thread(new ThreadStart(Listening));
             //Creates the thread
             ListThread.Start();
+            label1.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            label2.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            label3.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            label4.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            label5.Font = new Font("Paloseco", 10, FontStyle.Regular);
         }
 
         private void btnreturn_Click(object sender, EventArgs e)
@@ -184,6 +175,27 @@ namespace MasterCheck2._0
                 ToCsV(bunifuCustomDataGrid1, sfd.FileName); // Here dataGridview1 is your grid view name
                 clnt.SendFiles(this.txtip.Text, 65534, sfd.FileNames);
                 Interaction.MsgBox("El archivo se ha enviado con exito!", MsgBoxStyle.Information, "Notificacion");
+            }
+        }
+
+        private void cdlistas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cdlistas.Text == "Empleados")
+            {
+                bunifuCustomDataGrid1.DataSource = db.SelectDataTable(c);
+                btnexport.Enabled = true;
+               
+
+            }
+            else if (cdlistas.Text == "Salida")
+            {
+                bunifuCustomDataGrid1.DataSource = db.SelectDataTable(s);
+                btnexport.Enabled = true;
+            }
+            else if (cdlistas.Text == "Entrada")
+            {
+                bunifuCustomDataGrid1.DataSource = db.SelectDataTable(es);
+                btnexport.Enabled = true;
             }
         }
     }

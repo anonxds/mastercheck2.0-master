@@ -60,7 +60,7 @@ namespace MasterCheck2._0
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            label1.Font = new Font("Paloseco", 10, FontStyle.Regular);
         }
 
         private void btnlogin2_Click(object sender, EventArgs e)

@@ -49,7 +49,9 @@ namespace MasterCheck2._0
 
         private void Menu_Load(object sender, EventArgs e)
         {
-
+            label1.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            label2.Font = new Font("Paloseco", 10, FontStyle.Regular);
+            label3.Font = new Font("Paloseco", 10, FontStyle.Regular);
         }
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
