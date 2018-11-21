@@ -19,7 +19,7 @@ using Microsoft.VisualBasic;
 
 namespace MasterCheck2._0
 {
-    public partial class Lista : Form
+    public partial class Lista : CustomForm.MyForm
     {
         string c = string.Format("Select idrfid, noEmp as `No Empleado`, Nombre, FechaIn as `Fecha de Ingreso`, Asistencias, Faltas, Puesto from registros");
         string es = string.Format("select * from entrada");
@@ -28,11 +28,11 @@ namespace MasterCheck2._0
         public Lista()
         {
             InitializeComponent();
-            btnExp.Enabled = false;
+            btnexport.Enabled = false;
             //   dataGridView1.DataSource = db.SelectDataTable(c);
             for (int i = 0; i < lis.Length; i++)
             {
-                cbcmd.Items.Add(lis[i]);
+                cdlistas.Items.Add(lis[i]);
             }
         }
         //iniciar servidor
@@ -53,25 +53,14 @@ namespace MasterCheck2._0
         BaseDeDatos db = new BaseDeDatos();
         private void copy()
         {
-            dataGridView1.SelectAll();
-            DataObject dataObj = dataGridView1.GetClipboardContent();
+            bunifuCustomDataGrid1.SelectAll();
+            DataObject dataObj = bunifuCustomDataGrid1.GetClipboardContent();
             if (dataObj != null)
                 Clipboard.SetDataObject(dataObj);
         }
         private void btnExp_Click(object sender, EventArgs e)
         {
-            //   string c = string.Format("Select idrfid, Nombre, FechaIn, Asistencias, Faltas, Puesto, noEmp from registros");
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Excel Documents (*.xls)|*.xls";
-            sfd.FileName = "export.xls";
-            if (sfd.ShowDialog() == DialogResult.OK)
-            {
-                
-                //ToCsV(dataGridView1, @"c:\export.xls");
-                ToCsV(dataGridView1, sfd.FileName); // Here dataGridview1 is your grid view name
-                clnt.SendFiles(this.Text_ip.Text, 65534, sfd.FileNames);
-                Interaction.MsgBox("El archivo se ha enviado con exito!", MsgBoxStyle.Information, "Notificacion");
-            }
+           
         }
 
 
@@ -105,9 +94,7 @@ namespace MasterCheck2._0
 
         private void btnemp_Click(object sender, EventArgs e)
         {
-            Menu f = new Menu();
-            f.Show();
-            this.Hide();
+           
         }
 
         private void btnhis_Click(object sender, EventArgs e)
@@ -137,20 +124,20 @@ namespace MasterCheck2._0
 
         private void cbcmd_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbcmd.Text == "Empleados")
+            if(cdlistas.Text == "Empleados")
             {
-                dataGridView1.DataSource = db.SelectDataTable(c);
-                btnExp.Enabled = true;
+                bunifuCustomDataGrid1.DataSource = db.SelectDataTable(c);
+                btnexport.Enabled = true;
             }
-            else if(cbcmd.Text == "Salida")
+            else if(cdlistas.Text == "Salida")
             {
-                dataGridView1.DataSource = db.SelectDataTable(s);
-                btnExp.Enabled = true;
+                bunifuCustomDataGrid1.DataSource = db.SelectDataTable(s);
+                btnexport.Enabled = true;
             }
-            else if(cbcmd.Text == "Entrada")
+            else if(cdlistas.Text == "Entrada")
             {
-                dataGridView1.DataSource = db.SelectDataTable(es);
-                btnExp.Enabled = true;
+                bunifuCustomDataGrid1.DataSource = db.SelectDataTable(es);
+                btnexport.Enabled = true;
             }
         }
         private void OnDiagnosticMessage(string Args)
@@ -164,8 +151,8 @@ namespace MasterCheck2._0
         {
             Computer mycomputer = new Computer();
 
-            txtSaveLoc.Text = mycomputer.FileSystem.SpecialDirectories.MyDocuments + "\\";
-            server = new UNOLibs.Net.ServerClass(65534, true, txtSaveLoc.Text);
+            txtpath.Text = mycomputer.FileSystem.SpecialDirectories.MyDocuments + "\\";
+            server = new UNOLibs.Net.ServerClass(65534, true, txtpath.Text);
             server2 = new UNOLibs.Net.ServerClass(65532, true, "C:\\");
             Thread ListThread = new Thread(new ThreadStart(Listening));
             //Creates the thread
@@ -175,6 +162,29 @@ namespace MasterCheck2._0
         private void btnreturn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnregresar_Click(object sender, EventArgs e)
+        {
+            Menu f = new Menu();
+            f.Show();
+            this.Hide();
+        }
+
+        private void btnexport_Click(object sender, EventArgs e)
+        {
+            //   string c = string.Format("Select idrfid, Nombre, FechaIn, Asistencias, Faltas, Puesto, noEmp from registros");
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel Documents (*.xls)|*.xls";
+            sfd.FileName = "export.xls";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+
+                //ToCsV(dataGridView1, @"c:\export.xls");
+                ToCsV(bunifuCustomDataGrid1, sfd.FileName); // Here dataGridview1 is your grid view name
+                clnt.SendFiles(this.txtip.Text, 65534, sfd.FileNames);
+                Interaction.MsgBox("El archivo se ha enviado con exito!", MsgBoxStyle.Information, "Notificacion");
+            }
         }
     }
 }

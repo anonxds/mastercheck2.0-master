@@ -34,28 +34,43 @@ namespace MasterCheck2._0
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
-            f.Show();
-            this.Hide();
+          
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            Consultar c = new Consultar();
-            c.Show();
-            this.Hide();
+            
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
             Lista l = new Lista();
             l.Show();
             this.Hide();
         }
 
-        private void Menu_Load(object sender, EventArgs e)
+        private void btneditar3_Click(object sender, EventArgs e)
         {
+            Consultar c = new Consultar();
+            c.Show();
+            this.Hide();
+        }
 
+        private void btnagregar3_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            this.Hide();
         }
     }
 }

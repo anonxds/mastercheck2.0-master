@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 using System.IO;
 namespace MasterCheck2._0
 {
-    public partial class Form1 : Form
+    public partial class Form1 : CustomForm.MyForm
     {
       
         string[] dept = new string[5] { "Computacion", "Industrial", "Bioquimica", "Literatura", "Aeronatica" };
@@ -137,12 +137,7 @@ namespace MasterCheck2._0
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog opf = new OpenFileDialog();
-            opf.Filter = "Choose Image(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
-            if (opf.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox1.Image = Image.FromFile(opf.FileName);
-            }
+         
         }
 
         private void txtid2_TextChange(object sender, EventArgs e)
@@ -215,6 +210,16 @@ namespace MasterCheck2._0
             catch (Exception ex)
             {
                 MessageBox.Show("Verifique si los Datos estan correctos " + ex.Message);
+            }
+        }
+
+        private void btnpicture_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "Choose Image(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
+            if (opf.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(opf.FileName);
             }
         }
     }

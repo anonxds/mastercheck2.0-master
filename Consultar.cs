@@ -18,7 +18,7 @@ namespace MasterCheck2._0
 
             using (var cn = new MySqlConnection(cnn))
             {
-                cn.Open();
+               cn.Open();
                 string consulta = "SELECT idrfid FROM registros";
                 using (var cmd = new MySqlCommand(consulta, cn))
                 {
@@ -282,6 +282,11 @@ namespace MasterCheck2._0
             Menu f = new Menu();
             f.Show();
             this.Hide();
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consultar));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,6 +61,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblpuesto = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entrada)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Salida)).BeginInit();
@@ -68,49 +69,55 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnerase3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(215, 51);
+            this.label1.Location = new System.Drawing.Point(143, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 20);
+            this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "ID";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(215, 149);
+            this.label2.Location = new System.Drawing.Point(143, 97);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Nombre";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(215, 275);
+            this.label3.Location = new System.Drawing.Point(143, 179);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 20);
+            this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Puesto";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(215, 325);
+            this.label4.Location = new System.Drawing.Point(143, 211);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 20);
+            this.label4.Size = new System.Drawing.Size(74, 13);
             this.label4.TabIndex = 8;
             this.label4.Text = "Departamento";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1138, 389);
+            this.button1.Location = new System.Drawing.Point(419, 342);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 38);
+            this.button1.Size = new System.Drawing.Size(57, 25);
             this.button1.TabIndex = 9;
             this.button1.Text = "Exportar";
             this.button1.UseVisualStyleBackColor = true;
@@ -120,19 +127,19 @@
             // lbltiempo
             // 
             this.lbltiempo.AutoSize = true;
-            this.lbltiempo.Location = new System.Drawing.Point(694, 25);
+            this.lbltiempo.Location = new System.Drawing.Point(463, 16);
+            this.lbltiempo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbltiempo.Name = "lbltiempo";
-            this.lbltiempo.Size = new System.Drawing.Size(51, 20);
+            this.lbltiempo.Size = new System.Drawing.Size(35, 13);
             this.lbltiempo.TabIndex = 10;
             this.lbltiempo.Text = "label5";
             // 
             // lbltime
             // 
             this.lbltime.AutoSize = true;
-            this.lbltime.Location = new System.Drawing.Point(694, 59);
-            this.lbltime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbltime.Location = new System.Drawing.Point(463, 38);
             this.lbltime.Name = "lbltime";
-            this.lbltime.Size = new System.Drawing.Size(51, 20);
+            this.lbltime.Size = new System.Drawing.Size(35, 13);
             this.lbltime.TabIndex = 15;
             this.lbltime.Text = "label5";
             // 
@@ -144,53 +151,59 @@
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(266, 133);
+            this.lblApellido.Location = new System.Drawing.Point(177, 86);
+            this.lblApellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(65, 20);
+            this.lblApellido.Size = new System.Drawing.Size(44, 13);
             this.lblApellido.TabIndex = 18;
             this.lblApellido.Text = "Apellido";
             // 
             // lbledad
             // 
             this.lbledad.AutoSize = true;
-            this.lbledad.Location = new System.Drawing.Point(215, 213);
+            this.lbledad.Location = new System.Drawing.Point(143, 138);
+            this.lbledad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbledad.Name = "lbledad";
-            this.lbledad.Size = new System.Drawing.Size(47, 20);
+            this.lbledad.Size = new System.Drawing.Size(32, 13);
             this.lbledad.TabIndex = 21;
             this.lbledad.Text = "Edad";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1056, 535);
+            this.label5.Location = new System.Drawing.Point(685, 348);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 20);
+            this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 25;
             this.label5.Text = "Guardar";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1159, 535);
+            this.label6.Location = new System.Drawing.Point(754, 348);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 20);
+            this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 26;
             this.label6.Text = "Eliminar";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1062, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(307, 317);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(162, 158);
+            this.pictureBox1.Size = new System.Drawing.Size(108, 103);
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(79, 618);
+            this.label7.Location = new System.Drawing.Point(53, 402);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 20);
+            this.label7.Size = new System.Drawing.Size(50, 13);
             this.label7.TabIndex = 27;
             this.label7.Text = "Regresar";
             // 
@@ -218,10 +231,9 @@
             this.txtApellido2.IconPadding = 10;
             this.txtApellido2.IconRight = null;
             this.txtApellido2.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txtApellido2.Location = new System.Drawing.Point(25, 132);
-            this.txtApellido2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtApellido2.Location = new System.Drawing.Point(17, 86);
             this.txtApellido2.MaxLength = 32767;
-            this.txtApellido2.MinimumSize = new System.Drawing.Size(150, 54);
+            this.txtApellido2.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtApellido2.Modified = false;
             this.txtApellido2.Name = "txtApellido2";
             this.txtApellido2.PasswordChar = '\0';
@@ -230,7 +242,7 @@
             this.txtApellido2.SelectionLength = 0;
             this.txtApellido2.SelectionStart = 0;
             this.txtApellido2.ShortcutsEnabled = true;
-            this.txtApellido2.Size = new System.Drawing.Size(150, 54);
+            this.txtApellido2.Size = new System.Drawing.Size(100, 35);
             this.txtApellido2.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtApellido2.TabIndex = 31;
             this.txtApellido2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -262,10 +274,9 @@
             this.txtNombre2.IconPadding = 10;
             this.txtNombre2.IconRight = null;
             this.txtNombre2.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txtNombre2.Location = new System.Drawing.Point(25, 196);
-            this.txtNombre2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombre2.Location = new System.Drawing.Point(17, 127);
             this.txtNombre2.MaxLength = 32767;
-            this.txtNombre2.MinimumSize = new System.Drawing.Size(150, 54);
+            this.txtNombre2.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtNombre2.Modified = false;
             this.txtNombre2.Name = "txtNombre2";
             this.txtNombre2.PasswordChar = '\0';
@@ -274,7 +285,7 @@
             this.txtNombre2.SelectionLength = 0;
             this.txtNombre2.SelectionStart = 0;
             this.txtNombre2.ShortcutsEnabled = true;
-            this.txtNombre2.Size = new System.Drawing.Size(154, 54);
+            this.txtNombre2.Size = new System.Drawing.Size(103, 35);
             this.txtNombre2.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtNombre2.TabIndex = 32;
             this.txtNombre2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -306,10 +317,9 @@
             this.txtedad2.IconPadding = 10;
             this.txtedad2.IconRight = null;
             this.txtedad2.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txtedad2.Location = new System.Drawing.Point(30, 260);
-            this.txtedad2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtedad2.Location = new System.Drawing.Point(20, 169);
             this.txtedad2.MaxLength = 32767;
-            this.txtedad2.MinimumSize = new System.Drawing.Size(150, 54);
+            this.txtedad2.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtedad2.Modified = false;
             this.txtedad2.Name = "txtedad2";
             this.txtedad2.PasswordChar = '\0';
@@ -318,7 +328,7 @@
             this.txtedad2.SelectionLength = 0;
             this.txtedad2.SelectionStart = 0;
             this.txtedad2.ShortcutsEnabled = true;
-            this.txtedad2.Size = new System.Drawing.Size(154, 54);
+            this.txtedad2.Size = new System.Drawing.Size(103, 35);
             this.txtedad2.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtedad2.TabIndex = 33;
             this.txtedad2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -328,7 +338,7 @@
             // 
             // cbid2
             // 
-            this.cbid2.BackColor = System.Drawing.Color.DarkBlue;
+            this.cbid2.BackColor = System.Drawing.Color.RoyalBlue;
             this.cbid2.BorderRadius = 1;
             this.cbid2.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cbid2.DisabledColor = System.Drawing.Color.Gray;
@@ -349,10 +359,9 @@
             this.cbid2.ItemForeColor = System.Drawing.Color.Purple;
             this.cbid2.ItemHeight = 26;
             this.cbid2.ItemHighLightColor = System.Drawing.Color.Thistle;
-            this.cbid2.Location = new System.Drawing.Point(39, 51);
-            this.cbid2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbid2.Location = new System.Drawing.Point(26, 33);
             this.cbid2.Name = "cbid2";
-            this.cbid2.Size = new System.Drawing.Size(73, 32);
+            this.cbid2.Size = new System.Drawing.Size(50, 32);
             this.cbid2.TabIndex = 34;
             this.cbid2.Text = null;
             this.cbid2.SelectedIndexChanged += new System.EventHandler(this.cbid2_SelectedIndexChanged);
@@ -361,7 +370,7 @@
             // 
             // cbpuesto2
             // 
-            this.cbpuesto2.BackColor = System.Drawing.Color.DarkBlue;
+            this.cbpuesto2.BackColor = System.Drawing.Color.RoyalBlue;
             this.cbpuesto2.BorderRadius = 1;
             this.cbpuesto2.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cbpuesto2.DisabledColor = System.Drawing.Color.Gray;
@@ -382,16 +391,15 @@
             this.cbpuesto2.ItemForeColor = System.Drawing.Color.Purple;
             this.cbpuesto2.ItemHeight = 26;
             this.cbpuesto2.ItemHighLightColor = System.Drawing.Color.Thistle;
-            this.cbpuesto2.Location = new System.Drawing.Point(25, 326);
-            this.cbpuesto2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbpuesto2.Location = new System.Drawing.Point(17, 212);
             this.cbpuesto2.Name = "cbpuesto2";
-            this.cbpuesto2.Size = new System.Drawing.Size(181, 32);
+            this.cbpuesto2.Size = new System.Drawing.Size(122, 32);
             this.cbpuesto2.TabIndex = 35;
             this.cbpuesto2.Text = null;
             // 
             // cbdepartamento2
             // 
-            this.cbdepartamento2.BackColor = System.Drawing.Color.DarkBlue;
+            this.cbdepartamento2.BackColor = System.Drawing.Color.RoyalBlue;
             this.cbdepartamento2.BorderRadius = 1;
             this.cbdepartamento2.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
             this.cbdepartamento2.DisabledColor = System.Drawing.Color.Gray;
@@ -412,75 +420,73 @@
             this.cbdepartamento2.ItemForeColor = System.Drawing.Color.Purple;
             this.cbdepartamento2.ItemHeight = 26;
             this.cbdepartamento2.ItemHighLightColor = System.Drawing.Color.Thistle;
-            this.cbdepartamento2.Location = new System.Drawing.Point(25, 387);
-            this.cbdepartamento2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbdepartamento2.Location = new System.Drawing.Point(17, 252);
             this.cbdepartamento2.Name = "cbdepartamento2";
-            this.cbdepartamento2.Size = new System.Drawing.Size(181, 32);
+            this.cbdepartamento2.Size = new System.Drawing.Size(122, 32);
             this.cbdepartamento2.TabIndex = 36;
             this.cbdepartamento2.Text = null;
             // 
             // entrada
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.entrada.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.entrada.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.entrada.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.entrada.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.entrada.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.entrada.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.entrada.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.entrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.entrada.DoubleBuffered = true;
             this.entrada.EnableHeadersVisualStyles = false;
             this.entrada.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.entrada.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.entrada.Location = new System.Drawing.Point(363, 129);
-            this.entrada.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.entrada.Location = new System.Drawing.Point(247, 83);
             this.entrada.Name = "entrada";
             this.entrada.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.entrada.Size = new System.Drawing.Size(349, 298);
+            this.entrada.Size = new System.Drawing.Size(272, 229);
             this.entrada.TabIndex = 37;
             // 
             // Salida
             // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Salida.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Salida.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
             this.Salida.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.Salida.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Salida.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Salida.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Salida.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.Salida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Salida.DoubleBuffered = true;
             this.Salida.EnableHeadersVisualStyles = false;
             this.Salida.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.Salida.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.Salida.Location = new System.Drawing.Point(720, 129);
-            this.Salida.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Salida.Location = new System.Drawing.Point(525, 83);
             this.Salida.Name = "Salida";
             this.Salida.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.Salida.Size = new System.Drawing.Size(367, 298);
+            this.Salida.Size = new System.Drawing.Size(258, 229);
             this.Salida.TabIndex = 38;
             // 
             // btnguardar3
             // 
             this.btnguardar3.BackColor = System.Drawing.Color.Transparent;
             this.btnguardar3.Image = ((System.Drawing.Image)(resources.GetObject("btnguardar3.Image")));
-            this.btnguardar3.ImageActive = null;
-            this.btnguardar3.Location = new System.Drawing.Point(1053, 567);
+            this.btnguardar3.ImageActive = ((System.Drawing.Image)(resources.GetObject("btnguardar3.ImageActive")));
+            this.btnguardar3.Location = new System.Drawing.Point(683, 369);
+            this.btnguardar3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnguardar3.Name = "btnguardar3";
-            this.btnguardar3.Size = new System.Drawing.Size(71, 71);
+            this.btnguardar3.Size = new System.Drawing.Size(47, 46);
             this.btnguardar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnguardar3.TabIndex = 32;
             this.btnguardar3.TabStop = false;
@@ -491,10 +497,11 @@
             // 
             this.btnerase3.BackColor = System.Drawing.Color.Transparent;
             this.btnerase3.Image = ((System.Drawing.Image)(resources.GetObject("btnerase3.Image")));
-            this.btnerase3.ImageActive = null;
-            this.btnerase3.Location = new System.Drawing.Point(1153, 567);
+            this.btnerase3.ImageActive = ((System.Drawing.Image)(resources.GetObject("btnerase3.ImageActive")));
+            this.btnerase3.Location = new System.Drawing.Point(750, 369);
+            this.btnerase3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnerase3.Name = "btnerase3";
-            this.btnerase3.Size = new System.Drawing.Size(71, 71);
+            this.btnerase3.Size = new System.Drawing.Size(47, 46);
             this.btnerase3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnerase3.TabIndex = 31;
             this.btnerase3.TabStop = false;
@@ -511,17 +518,19 @@
             this.panel2.Controls.Add(this.txtApellido2);
             this.panel2.Controls.Add(this.txtedad2);
             this.panel2.Controls.Add(this.txtNombre2);
-            this.panel2.Location = new System.Drawing.Point(-12, -4);
+            this.panel2.Location = new System.Drawing.Point(-8, -3);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(221, 589);
+            this.panel2.Size = new System.Drawing.Size(147, 383);
             this.panel2.TabIndex = 40;
             // 
             // lblpuesto
             // 
             this.lblpuesto.AutoSize = true;
-            this.lblpuesto.Location = new System.Drawing.Point(215, 386);
+            this.lblpuesto.Location = new System.Drawing.Point(143, 251);
+            this.lblpuesto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblpuesto.Name = "lblpuesto";
-            this.lblpuesto.Size = new System.Drawing.Size(59, 20);
+            this.lblpuesto.Size = new System.Drawing.Size(40, 13);
             this.lblpuesto.TabIndex = 41;
             this.lblpuesto.Text = "Puesto";
             // 
@@ -530,21 +539,37 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(2, 591);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(1, 384);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(71, 71);
+            this.bunifuImageButton1.Size = new System.Drawing.Size(47, 46);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 33;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton2.Image = global::MasterCheck2._0.Properties.Resources._45390856_1951129024967123_5506682406058328064_n;
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(750, 12);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(42, 43);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 42;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
+            // 
             // Consultar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1236, 663);
+            this.ClientSize = new System.Drawing.Size(804, 431);
+            this.Controls.Add(this.bunifuImageButton2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.label6);
@@ -566,6 +591,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MinimizeBox = false;
             this.Name = "Consultar";
             this.Opacity = 0.9D;
@@ -580,6 +606,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -613,5 +640,6 @@
         private Bunifu.Framework.UI.BunifuImageButton btnerase3;
         private Bunifu.Framework.UI.BunifuImageButton btnguardar3;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
     }
 }
