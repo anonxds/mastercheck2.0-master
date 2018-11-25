@@ -45,7 +45,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(249, 326);
+            this.textBox1.Location = new System.Drawing.Point(260, 326);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(127, 26);
             this.textBox1.TabIndex = 15;
@@ -54,8 +54,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Enabled = false;
-            this.lblID.Location = new System.Drawing.Point(643, 194);
+            this.lblID.Location = new System.Drawing.Point(569, 194);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(65, 20);
             this.lblID.TabIndex = 2;
@@ -64,7 +63,7 @@
             // lblNom
             // 
             this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(761, 194);
+            this.lblNom.Location = new System.Drawing.Point(687, 194);
             this.lblNom.Name = "lblNom";
             this.lblNom.Size = new System.Drawing.Size(13, 20);
             this.lblNom.TabIndex = 5;
@@ -78,7 +77,7 @@
             // lbldept
             // 
             this.lbldept.AutoSize = true;
-            this.lbldept.Location = new System.Drawing.Point(643, 224);
+            this.lbldept.Location = new System.Drawing.Point(569, 224);
             this.lbldept.Name = "lbldept";
             this.lbldept.Size = new System.Drawing.Size(112, 20);
             this.lbldept.TabIndex = 8;
@@ -92,12 +91,13 @@
             this.btnhistorial.TabIndex = 9;
             this.btnhistorial.Text = "Historial";
             this.btnhistorial.UseVisualStyleBackColor = true;
+            this.btnhistorial.Visible = false;
             this.btnhistorial.Click += new System.EventHandler(this.btnhistorial_Click);
             // 
             // lbldepartamento
             // 
             this.lbldepartamento.AutoSize = true;
-            this.lbldepartamento.Location = new System.Drawing.Point(761, 224);
+            this.lbldepartamento.Location = new System.Drawing.Point(687, 224);
             this.lbldepartamento.Name = "lbldepartamento";
             this.lbldepartamento.Size = new System.Drawing.Size(13, 20);
             this.lbldepartamento.TabIndex = 10;
@@ -117,7 +117,7 @@
             // 
             this.lblChek.AutoSize = true;
             this.lblChek.Image = global::MasterCheck2._0.Properties.Resources.appbar_check;
-            this.lblChek.Location = new System.Drawing.Point(856, 194);
+            this.lblChek.Location = new System.Drawing.Point(569, 265);
             this.lblChek.Name = "lblChek";
             this.lblChek.Size = new System.Drawing.Size(141, 60);
             this.lblChek.TabIndex = 12;
@@ -152,7 +152,7 @@
             this.circularProgressBar1.OuterColor = System.Drawing.Color.Gray;
             this.circularProgressBar1.OuterMargin = -25;
             this.circularProgressBar1.OuterWidth = 26;
-            this.circularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.circularProgressBar1.ProgressColor = System.Drawing.Color.DeepSkyBlue;
             this.circularProgressBar1.ProgressWidth = 25;
             this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
             this.circularProgressBar1.Size = new System.Drawing.Size(480, 492);
@@ -173,8 +173,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ClientSize = new System.Drawing.Size(1028, 509);
+            this.BackColor = System.Drawing.Color.SeaShell;
+            this.ClientSize = new System.Drawing.Size(815, 509);
             this.ControlBox = false;
             this.Controls.Add(this.lbltimer);
             this.Controls.Add(this.lblChek);

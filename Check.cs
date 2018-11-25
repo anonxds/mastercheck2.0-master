@@ -225,7 +225,7 @@ namespace MasterCheck2._0
                             dataGridView1.DataSource = db.SelectDataTable(hist);
                             */
 
-                            MessageBox.Show("El usuario entro");
+                            //MessageBox.Show("El usuario entro");
                             textBox1.Text = "";
                             
                         }

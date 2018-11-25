@@ -164,17 +164,24 @@ namespace MasterCheck2._0
 
         private void btnexport_Click(object sender, EventArgs e)
         {
-            //   string c = string.Format("Select idrfid, Nombre, FechaIn, Asistencias, Faltas, Puesto, noEmp from registros");
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Filter = "Excel Documents (*.xls)|*.xls";
-            sfd.FileName = "export.xls";
-            if (sfd.ShowDialog() == DialogResult.OK)
+            try
             {
+                //   string c = string.Format("Select idrfid, Nombre, FechaIn, Asistencias, Faltas, Puesto, noEmp from registros");
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "Excel Documents (*.xls)|*.xls";
+                sfd.FileName = "export.xls";
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
 
-                //ToCsV(dataGridView1, @"c:\export.xls");
-                ToCsV(bunifuCustomDataGrid1, sfd.FileName); // Here dataGridview1 is your grid view name
-                clnt.SendFiles(this.txtip.Text, 65534, sfd.FileNames);
-                Interaction.MsgBox("El archivo se ha enviado con exito!", MsgBoxStyle.Information, "Notificacion");
+                    //ToCsV(dataGridView1, @"c:\export.xls");
+                    ToCsV(bunifuCustomDataGrid1, sfd.FileName); // Here dataGridview1 is your grid view name
+                    clnt.SendFiles(this.txtip.Text, 65534, sfd.FileNames);
+                    Interaction.MsgBox("El archivo se ha enviado con exito!", MsgBoxStyle.Information, "Notificacion");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Hubo un error "+ ex);
             }
         }
 
